@@ -114,7 +114,7 @@ namespace Caruena_Loeva_Basis
             var vectorNewX = Matrix.MatrixProduct(matrixInvA, vectorB);
             // Вычисление невязок системы.
             var d = Matrix.Discrepancy(matrixA, vectorNewX, vectorB);
-            textBoxDiscrepancy.Text = d.ToString();
+            textBoxDiscrepancy.Text = d.ToString("e3");
             // Проверка свойств.
             var AinvAA = Matrix.MatrixProduct(Matrix.MatrixProduct(matrixA, matrixInvA), matrixA);
             var invAAinvA = Matrix.MatrixProduct(Matrix.MatrixProduct(matrixInvA, matrixA), matrixInvA);
